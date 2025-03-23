@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PageWrapper from "@/components/PageWrapper";
-import ParticlesBackground from "@/components/ParticlesBackground";
 import Navbar from "@/components/Navbar";
 
 
@@ -26,7 +24,6 @@ export default function RootLayout({
         <PageWrapper>
           <main className="pt-16 p-6">{children}</main>
         </PageWrapper>
-        <ParticlesBackground />
       </body>
     </html>
   );

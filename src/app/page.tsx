@@ -2,8 +2,6 @@
 import { motion } from "framer-motion";
 import ThreeDHero from "@/components/3DHero";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import ParticlesBackground from "@/components/ParticlesBackground";
 import ScrollSection from "@/components/ScrollSection";
 
 export default function Home() {
@@ -17,7 +15,6 @@ export default function Home() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <ParticlesBackground />
 
           {/* Left Section - Floating Profile Image with Glow */}
           <motion.div
