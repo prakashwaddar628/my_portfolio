@@ -7,22 +7,11 @@ import ParticlesBackground from "@/components/ParticlesBackground";
 import ScrollSection from "@/components/ScrollSection";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
     <>
       <ScrollSection>
         <motion.section
-          className="animated-bg min-h-screen flex flex-col md:flex-row items-center justify-center text-center 
-                 md:text-left space-y-6 md:space-y-0 md:space-x-10 p-6 transition-all duration-300"
+          className="animated-bg min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-6 md:space-y-0 md:space-x-10 p-6 transition-all duration-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -55,7 +44,7 @@ export default function Home() {
           {/* Right Section - Text & 3D */}
           <div className="flex flex-col items-center md:items-start max-w-2xl">
             <h1 className="text-5xl font-extrabold text-white dark:text-yellow-400 drop-shadow-lg">
-              Hi, I'm Prakash L Waddar 🚀
+              Hi, I&#39;m Prakash L Waddar 🚀
             </h1>
             <p className="text-xl text-gray-100 dark:text-gray-400">
               Full-Stack Developer | AI & Data Science Enthusiast
@@ -102,7 +91,7 @@ export default function Home() {
         <div className="min-h-screen flex flex-col justify-center items-center text-center px-6">
           <h1 className="text-5xl font-bold">Contact Me</h1>
           <p className="mt-4 text-lg">
-            Let's connect and build something amazing!
+            {`Let's connect and build something amazing!`}
           </p>
         </div>
       </ScrollSection>

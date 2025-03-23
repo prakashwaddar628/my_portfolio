@@ -19,8 +19,8 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        Hi! I'm **Prakash Waddar**, a passionate **Full-Stack Developer** with experience in **React, Next.js, MongoDB, and AI technologies**.  
-        I love building interactive applications, working with **data-driven systems**, and exploring **3D web experiences**.  
+       {` Hi! I'm **Prakash Waddar**, a passionate **Full-Stack Developer** with experience in **React, Next.js, MongoDB, and AI technologies**.  
+        I love building interactive applications, working with **data-driven systems**, and exploring **3D web experiences**. `} 
       </motion.p>
 
       <motion.a

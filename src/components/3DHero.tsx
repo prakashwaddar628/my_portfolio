@@ -3,9 +3,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, TorusKnot } from "@react-three/drei";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Mesh } from "three";
+
+
 
 function AnimatedTorus() {
-  const ref = useRef<any>(null);
+  const ref = useRef<Mesh>(null);
 
   useFrame(() => {
     if (ref.current) {
