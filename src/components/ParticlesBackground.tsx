@@ -1,12 +1,13 @@
 "use client";
 import { useCallback } from "react";
 import Particles from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // Correct import
+import { loadFull } from "tsparticles";
+import type { Engine } from "@tsparticles/engine"; // ✅ Ensure correct Engine type
 
-export default function ParticlesBackground() {
-  const particlesInit = useCallback(async (main) => {
-    console.log("Initializing particles...");
-    await loadSlim(main); // Use loadSlim instead of loadFull
+const ParticlesBackground = () => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log("Particles Engine Loaded:", engine);
+    await loadFull(engine); // ✅ Ensures tsparticles engine loads correctly
   }, []);
 
   return (
@@ -14,14 +15,16 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       options={{
-        background: { color: "#0d1117" },
+        background: { color: { value: "#000" } },
         particles: {
-          number: { value: 100 },
+          color: { value: "#ffffff" },
           move: { enable: true, speed: 1 },
-          shape: { type: "circle" },
+          number: { value: 100 },
           size: { value: 3 },
         },
       }}
     />
   );
-}
+};
+
+export default ParticlesBackground;
